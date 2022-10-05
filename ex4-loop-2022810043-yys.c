@@ -3,7 +3,7 @@
 int main(void){
     int num = 0;
     printf("행의 수를 입력하시오:");
-    scanf("%d", &num);;
+    scanf("%d", &num);
     if (num > 10){
         num = num%10;
     }
