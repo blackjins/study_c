@@ -14,7 +14,7 @@ int main(void){
                 if(fir%2 == 0 & sec % 2 == 0){
                     if(sec > fir){
                         count += 1;
-                        continue;
+                        break;
                     }
                     printf("%d*%d = %d\n", fir , sec , fir*sec);
                     count += 1;
@@ -22,7 +22,7 @@ int main(void){
                 else if(fir%2 != 0 & sec % 2 != 0){
                     if(sec > fir){
                         count += 1;
-                        continue;
+                        break;
                     }
                     printf("%d*%d = %d\n", fir , sec , fir*sec);
                     count += 1;
@@ -39,7 +39,7 @@ int main(void){
                 if(fir % 2 == 0 & sec % 2 == 0){
                     if(sec > fir){
                         count += 1;
-                        continue;
+                        break;
                     }
                     printf("%d*%d = %d\n", fir , sec , fir*sec);
                     count += 1;
@@ -56,7 +56,7 @@ int main(void){
                 if(fir % 2 != 0 & sec % 2 != 0){
                     if(sec > fir){
                         count += 1;
-                        continue;
+                        break;
                     }
                     printf("%d*%d = %d\n", fir , sec , fir*sec);
                     count += 1;
