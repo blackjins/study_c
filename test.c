@@ -1,15 +1,12 @@
 #include <stdio.h>
 
-int main(void){
-    int is;
-    for(int cur = 2 ; cur < 10 ; cur ++){
-        for(is = 1 ; is < 10 ; is ++){
-            if(cur % 2 == 0 & is % 2 == 0){
-                if(is > cur){
-                    continue;
-                }
-                printf("%d*%d = %d\n", cur , is , cur*is);
-            }
-        }   
-    }
+int double_add(double num1, double num2){
+    return num1 + num2;
+}
+void main(void){
+    double num1, num2, result;
+    printf("두 개의 숫자를 입력하세요 : ");
+    scanf("%d %d", &num1, &num2);
+    result = double_add(num1, num2);
+    printf("result  %d", result);
 }
