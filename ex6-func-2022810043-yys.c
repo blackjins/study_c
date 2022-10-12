@@ -9,19 +9,19 @@ void menu_disp(void){
     printf(">>원하는 메뉴를 선택하세요:");
 }
 
-int double_add(double num1, double num2){
+double double_add(double num1, double num2){
     return num1 + num2;
 }
 
-int double_sub(double num1, double num2){
+double double_sub(double num1, double num2){
     return num1 - num2;
 }
 
-int double_mul(double num1, double num2){
+double double_mul(double num1, double num2){
     return num1 * num2;
 }
 
-int double_div(double num1, double num2){
+double double_div(double num1, double num2){
     if(num2 == 0 ){
         printf("[오류]0으로 나눌 수 없습니다.");
         return -1;
@@ -29,7 +29,7 @@ int double_div(double num1, double num2){
     return num1 / num2;
 }
 
-int Void_res_disp(double result){
+double Void_res_disp(double result){
     if(result == -1){
         return 0;
     }
