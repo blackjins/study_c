@@ -23,19 +23,14 @@ double double_mul(double num1, double num2){
 
 double double_div(double num1, double num2){
     if(num2 == 0 ){
-        printf("[오류]0으로 나눌 수 없습니다.");
-        return -1;
+        printf("[오류]0으로 나눌 수 없습니다.\n");
+        return 0;
     }
     return num1 / num2;
 }
 
-double Void_res_disp(double result){
-    if(result == -1){
-        return 0;
-    }
-    else{
+void Void_res_disp(double result){
         printf("결과값은 %lf 입니다.", result);
-    }
 }
 
 int main(void){
