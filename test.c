@@ -1,12 +1,62 @@
 #include <stdio.h>
 
-int double_add(double num1, double num2){
-    return num1 + num2;
+
+void menu_disp()
+{
+   printf("1.µ¡¼À(addition) \n,2.»¬¼À(subtraction) \n, 3.°ö¼À(multiplication) \n, 4³ª´°¼À(division) \n");
+   printf("¿øÇÏ´Â ¸Ş´º¸¦ ¼±ÅÃÇÏ¼¼¿ä:");
 }
-void main(void){
-    double num1, num2, result;
-    printf("ë‘ ê°œì˜ ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
-    scanf("%d %d", &num1, &num2);
-    result = double_add(num1, num2);
-    printf("result  %d", result);
+
+double add(double num2, double num3)
+{
+   return num2 + num3;
+}
+
+double sub(double num2, double num3)
+{
+   return num2 - num3;
+}
+
+double mul(double num2, double num3)
+{
+   return num2 * num3;
+}
+
+double div(double num2, double num3)
+{
+   if (num3 == 0)
+      printf("[¿À·ù]¸Ş´º¸¦ Àß ¸ø ÀÔ·ÂÇÏ¿´½À´Ï´Ù. \n");
+   return num2 / num3;
+}
+
+void Void_res_disp(double result){
+        printf("°á°ú°ªÀº %lf ÀÔ´Ï´Ù.", result);
+}
+
+int main(void)
+{
+    int num;
+    double num2, num3, result;
+    menu_disp();
+    scanf("%d", &num);
+    switch (num)
+    {
+    case 1:
+        printf("µÎ ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä:");
+        scanf("%lf %lf", &num2, &num3);
+        result = add(num2,num3);
+        Void_res_disp(result);
+        break;
+    case 2:
+        break;
+    case 3:
+        break;
+    case 4:
+        break;
+    
+    default:
+    printf("[¿À·ù]¸Ş´º¸¦ Àß¸ø ¼±ÅÃÇÏ¼Ì½À´Ï´Ù.");
+        break;
+    }
+    
 }
