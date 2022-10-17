@@ -14,7 +14,7 @@ int RecursiveSum(int num_2){
     if (num_2 == 1){
         return 1;
     }
-    return num_2 += RecursiveSum(num_2-1);
+    return num_2 + RecursiveSum(num_2-1);
 }
 
 int main(void){
