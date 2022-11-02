@@ -24,10 +24,13 @@ double cltoaver(double*arrA){
         sum += arrA[i];
     }
     double aver = sum/5;
-    double abs_min =(arrA[0] - aver) < 0 ? -(arrA[0] - aver) : (arrA[0] - aver);
+    double abs_min = ((arrA[0] - aver) < 0 ) ? -(arrA[0] - aver) : (arrA[0] - aver); // abs_min == 2.0
     double cltoav = arrA[0];
-    for(int t = 0 ; t < 5 ; t++){
-        if(abs_min > (arrA[t] - aver) < 0 ? -(arrA[t] - aver) : )
+    for(int s = 1 ; s < 5 ; s++){
+        if(abs_min > (((arrA[s] - aver) < 0 ) ? -(arrA[s] - aver) : (arrA[s] - aver))){
+            abs_min = ((arrA[s] - aver) < 0 ) ? -(arrA[s] - aver) : (arrA[s] - aver);
+            cltoav = arrA[s];
+        }
     }
     return cltoav;
 }
