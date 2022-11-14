@@ -1,53 +1,21 @@
 #include <stdio.h>
 int main(void){
+    int arr[2][10] = { 0 ,};
+    int tmp, even_len, odd_len, i = 0;
+    while(i < 10){
+        printf("입력:");
+        scanf("%d", &tmp);
 
-    int arr_2R_1[3][3] ={
-        {1, 1, 1},
-        {1, 1, 1},
-        {1, 1, 1}
-    };
-
-    int arr_2R_2[3][3] ={
-        {2, 2, 2},
-        {2, 2, 2},
-        {3, 3, 3}
-    };
-
-    int result[3][3] ={
-        {7, 7, 7},
-        {7, 7, 7},
-        {7, 7, 7}
-    };
-
-    for(int i = 0 ; i < 3 ; i++){
-        printf("|");
-        for (int t = 0; t < 3; t++){
-            printf("%d", arr_2R_1[i][t]);
+        if(tmp % 2 == 0){
+            arr[0][even_len] = tmp;
+            even_len += 1;
+            i += 1;
         }
-        printf("|");
-        if(i == 1){
-            printf("    *    ");    
+        
+        else if(tmp % 2 != 0){
+            arr[1][odd_len] = tmp;
+            odd_len += 1;
+            i += 1;
         }
-        else{
-            printf("         ");
-        }
-        printf("|");
-        for (int t = 0; t < 3; t++){
-            printf("%d", arr_2R_2[i][t]);
-        }
-        printf("|");
-        if(i == 1){
-            printf("    =    ");    
-        }
-        else{
-            printf("         ");
-        }
-        printf("|");
-        for (int t = 0; t < 3; t++){
-            printf("%d", result[i][t]);
-        }
-        printf("|");
-        printf("\n");
     }
-
 }
