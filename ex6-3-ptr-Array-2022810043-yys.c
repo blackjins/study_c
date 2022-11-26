@@ -1,6 +1,6 @@
 #include <stdio.h>
 void ShowOdd(int *arr[][10], int len){
-    printf("홀수 출력(%d개):", len);
+    printf("홀수 개수는(%d개):", len);
     for(int i = 0 ; i < len ; i++){
         printf("%d", arr[1][i]);
         if(i < len-1){
@@ -11,7 +11,7 @@ void ShowOdd(int *arr[][10], int len){
 }
 
 void ShowEven(int *arr[][10], int len){
-    printf("짝수 출력(%d개):", len);
+    printf("짝수 개수는(%d개):", len);
     for(int i = 0 ; i < len ; i++){
         printf("%d", arr[0][i]);
         if(i < len-1){
