@@ -1,15 +1,12 @@
 #include <stdio.h>
 #include <string.h>
 
-int test(){
-    printf("test");
-    return 0;
-}
-
 
 int main(void){
-    test();
-    if(test() == 0){
-        printf("Sswdw");
+    char arr[100] = "#$%&";
+    for(int i = 0 ; i < strlen(arr) ; i++){
+        printf("%d", i);
+        printf("%d", strlen(arr));
+        
     }
 }

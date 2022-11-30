@@ -32,24 +32,22 @@ int digit_con(char arr[]){
 int schar_con(char arr[]){
     int tmp = 0;
     for(int i = 0 ; i < strlen(arr) ; i++){
-        if(strstr(arr,"#") != NULL){
-            break;
-        }
-        else if(strstr(arr,"$") != NULL){
-            break;
-        }
-        else if(strstr(arr,"%") != NULL){
-            break;
-        }
-        else if(strstr(arr,"&") != NULL){
-            break;
+        if(35 <= arr[i] && arr[i] <= 38){
+            continue;
         }
         else if(isdigit(arr[i]) == 0 && isalpha(arr[i]) == 0){
             tmp = 1;
             break;
         }
-        else{
-            tmp = 2;
+        else if(arr[i] == 0){
+            break;
+        }
+        if(i == strlen(arr)-1){
+            for(int s = 0 ; s < strlen(arr) ; s++){
+                if(isdigit(arr[s]) != 0 || isalpha(arr[s]) != 0){
+                    tmp = 2;
+                }
+            }
         }
     }
     if(tmp == 1){
